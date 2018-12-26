@@ -1,0 +1,42 @@
+h1 {
+  position: relative;
+  padding: 1em;/*要素内の余白*/
+  background: silver;/*背景色*/
+}
+h1:before {/*疑似要素*/
+  position: absolute;
+  content: 'ラベル';
+  font-size: 16px;
+  top: 0;
+  left: 0;
+  color: white;/*文字色*/
+  padding: 0.2em 0.4em;/*余白*/
+  background: #F89174;/*背景色*/
+}
+
+h3:before {
+  font-family: FontAwesome;
+  content: "\f00c";
+  padding-right : 5px;/*文字との隙間*/
+  color: #f89174;/*アイコンの色*/
+}
+
+.example {
+  position: relative;
+  background: #EFEFEF;
+  width: 300px;/*吹き出し幅*/
+  padding: 20px;/*内側の余白*/
+  border-radius: 10px;/*角の丸み*/
+  margin-bottom: 30px;/*下の余白*/
+}
+
+.example:before {
+  position: absolute;/*絶対配置*/
+  content: '';/*空に*/
+  border-top: 20px solid #EFEFEF;/*三角を作る*/
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
